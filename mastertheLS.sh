@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A -m -c -F >> mastertheLS
+ls -A -m -c -F

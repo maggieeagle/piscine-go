@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A -m -c -F
+ls -A -m -c -F | sed s/' '//g

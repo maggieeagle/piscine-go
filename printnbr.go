@@ -32,7 +32,6 @@ func AddToString(digit int) {
 }
 
 func PrintNbr(n int) {
-
 	str = ""
 
 	if n == 0 {

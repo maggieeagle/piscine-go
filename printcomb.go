@@ -4,7 +4,7 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func printComb() {
+func PrintComb() {
 	digits := []rune("0123456789")
 	for i := 0; i < len(digits)-2; i++ {
 		for j := i + 1; j < len(digits)-1; j++ {

@@ -47,6 +47,4 @@ func PrintNbr(n int) {
 	for i := len(s) - 1; i > -1; i-- {
 		z01.PrintRune(s[i])
 	}
-
-	z01.PrintRune('\n')
 }

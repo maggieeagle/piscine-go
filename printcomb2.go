@@ -10,7 +10,7 @@ func PrintComb2() {
 	for i := 0; i < len(digits); i++ {
 		for j := 0; j < len(digits); j++ {
 			for k := 0; k < len(digits); k++ {
-				for l := 0; l < len(digits); l++ {
+				for l := j + 1; l < len(digits); l++ {
 					if !(i == k && j == l) {
 						z01.PrintRune(digits[i])
 						z01.PrintRune(digits[j])

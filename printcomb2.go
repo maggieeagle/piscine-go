@@ -8,7 +8,7 @@ func PrintComb2() {
 	digits := []rune("0123456789")
 
 	for i := 0; i < len(digits); i++ {
-		for j := 0; j < len(digits)-1; j++ {
+		for j := 0; j < len(digits); j++ {
 			for k := i; k < len(digits); k++ {
 				for l := j; l < len(digits); l++ {
 					if !(i == k && j == l) {

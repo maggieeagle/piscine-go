@@ -32,14 +32,21 @@ func AddToString(digit int) {
 }
 
 func PrintNbr(n int) {
-	if n < 0 {
-		z01.PrintRune('-')
-		n += -2 * n
-	}
 
-	for n > 0 {
-		AddToString(n % 10)
-		n /= 10
+	str = ""
+
+	if n == 0 {
+		AddToString(0)
+	} else {
+		if n < 0 {
+			z01.PrintRune('-')
+			n += -2 * n
+		}
+
+		for n > 0 {
+			AddToString(n % 10)
+			n /= 10
+		}
 	}
 
 	s := []rune(str)

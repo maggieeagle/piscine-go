@@ -31,6 +31,7 @@ func AddToString(digit int) {
 	}
 }
 
+//некоторые числа из тестов не помещаются в int n
 func PrintNbr(n int) {
 	str = ""
 

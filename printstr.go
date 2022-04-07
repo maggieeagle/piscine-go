@@ -7,5 +7,4 @@ func PrintStr(s string) {
 	for i := 0; i < len(str); i++ {
 		z01.PrintRune(str[i])
 	}
-	z01.PrintRune('\n')
 }

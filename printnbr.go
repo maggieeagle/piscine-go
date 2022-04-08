@@ -34,7 +34,6 @@ func AddToString(digit int) {
 }
 
 func PrintNbr(n int) {
-
 	str = ""
 
 	if n == MIN_INT_64 {

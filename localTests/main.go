@@ -6,9 +6,7 @@ import (
 )
 
 func main() {
-	a := 13
-	b := 2
-	piscine.UltimateDivMod(&a, &b)
-	fmt.Println(a)
-	fmt.Println(b)
+	s := []int{124, 4, -3, 20, 124, 125}
+	piscine.SortIntegerTable(s)
+	fmt.Println(s)
 }

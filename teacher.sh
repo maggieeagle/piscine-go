@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Dartey Henv'
+echo $MAIN_SUSPECT

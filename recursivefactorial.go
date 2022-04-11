@@ -10,7 +10,6 @@ func RecursiveFactorial(nb int) int {
 	}
 
 	prevRes := RecursiveFactorial(nb - 1)
-	println(prevRes)
 
 	if nb*prevRes > prevRes {
 		return nb * prevRes

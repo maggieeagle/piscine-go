@@ -15,7 +15,7 @@ func PrintQuad(x, y int, s1, s2, s3, s4, s5, s6 rune) {
 		if x > 1 {
 			z01.PrintRune(s3)
 		}
-		println()
+		z01.PrintRune('\n')
 	}
 	for j := 1; j < y-1; j++ {
 		if x > 0 {
@@ -27,7 +27,7 @@ func PrintQuad(x, y int, s1, s2, s3, s4, s5, s6 rune) {
 		if x > 1 {
 			z01.PrintRune(s6)
 		}
-		println()
+		z01.PrintRune('\n')
 	}
 	if y > 1 {
 		if x > 0 {
@@ -39,7 +39,7 @@ func PrintQuad(x, y int, s1, s2, s3, s4, s5, s6 rune) {
 		if x > 1 {
 			z01.PrintRune(s5)
 		}
-		println()
+		z01.PrintRune('\n')
 	}
 }
 

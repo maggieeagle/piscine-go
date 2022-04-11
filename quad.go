@@ -43,9 +43,9 @@ func PrintQuad(x, y int, s1, s2, s3, s4, s5, s6 rune) {
 	}
 }
 
-//s1-s2-s3
-//s6	s6
-//s4-s2-s5
+// s1-s2-s3
+// s6	s6
+// s4-s2-s5
 
 func QuadA(x, y int) {
 	s1 := 'o'

@@ -14,6 +14,13 @@ func IsLetterLow(l byte) bool {
 	return false
 }
 
+func IsLetterNumeric(l byte) bool {
+	if l >= 48 && l <= 57 {
+		return true
+	}
+	return false
+}
+
 func LowLetterToHigh(l byte) byte {
 	return l - 32
 }
@@ -31,9 +38,9 @@ func Capitalize(s string) string {
 		res += string(str[0])
 	}
 	for i := 1; i < len(str); i++ {
-		if (IsLetterHigh(str[i-1]) || IsLetterLow(str[i-1])) && IsLetterHigh(str[i]) {
+		if (IsLetterHigh(str[i-1]) || IsLetterLow(str[i-1]) || IsLetterNumeric(str[i-1])) && IsLetterHigh(str[i]) {
 			res += string(HighLetterToLow(str[i]))
-		} else if !(IsLetterHigh(str[i-1]) || IsLetterLow(str[i-1])) && IsLetterLow(str[i]) {
+		} else if !(IsLetterHigh(str[i-1]) || IsLetterLow(str[i-1]) || IsLetterNumeric(str[i-1])) && IsLetterLow(str[i]) {
 			res += string(LowLetterToHigh(str[i]))
 		} else {
 			res += string(str[i])

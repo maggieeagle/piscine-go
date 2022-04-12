@@ -8,8 +8,8 @@ func min(a, b int) int {
 }
 
 func Compare(a, b string) int {
-	str1 := []byte(a)
-	str2 := []byte(b)
+	str1 := []rune(a)
+	str2 := []rune(b)
 
 	for i := 0; i < min(len(str1), len(str2)); i++ {
 		if str1[i] < str2[i] {

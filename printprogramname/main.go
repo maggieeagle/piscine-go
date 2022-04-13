@@ -17,4 +17,5 @@ func main() {
 	for i := index + 1; i < len(str); i++ {
 		z01.PrintRune(str[i])
 	}
+	z01.PrintRune('\n')
 }

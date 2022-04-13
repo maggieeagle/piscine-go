@@ -6,14 +6,19 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func main() {
-
-	arguments := os.Args
-	name := arguments[0]
-
-	runes := []rune(name)
-	for i := range runes {
-		z01.PrintRune(runes[i])
+func PrintStr(s string) {
+	str := []rune(s)
+	var index int = 0
+	for i := 0; i < len(s); i++ {
+		if str[i] == '/' {
+			index = i
+		}
 	}
-	z01.PrintRune('\n')
+	for i := index + 1; i < len(s); i++ {
+		z01.PrintRune(str[i])
+	}
+}
+
+func main() {
+	PrintStr(os.Args[0])
 }

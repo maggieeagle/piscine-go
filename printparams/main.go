@@ -8,17 +8,6 @@ import (
 
 func main() {
 	params := os.Args
-	str := []rune(params[0])
-	var index int = 0
-	for i := 0; i < len(str); i++ {
-		if str[i] == '/' {
-			index = i
-		}
-	}
-	for i := index + 1; i < len(str); i++ {
-		z01.PrintRune(str[i])
-	}
-	z01.PrintRune('\n')
 
 	for i := 1; i < len(params); i++ {
 		str := []rune(params[i])

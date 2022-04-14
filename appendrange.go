@@ -3,7 +3,7 @@ package piscine
 func CreateArrayOfSize(size int) []int {
 	var answer []int
 	for i := 0; i < size; i++ {
-		answer = append(answer, i+1)
+		answer = append(answer, i)
 	}
 	return answer
 }
@@ -18,8 +18,8 @@ func AppendRange(min, max int) []int {
 	arr := CreateArrayOfSize(size)
 
 	if size > 0 {
-		for i := min; i < max; i++ {
-			arr = append(arr, i)
+		for i := 0; i < size; i++ {
+			arr[i] = min + i
 		}
 	}
 	return arr

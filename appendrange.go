@@ -9,7 +9,6 @@ func CreateArrayOfSize(size int) []int {
 }
 
 func AppendRange(min, max int) []int {
-
 	var size int = 0
 
 	if min < max {

@@ -1,15 +1,16 @@
 package main
 
 import (
-	"os"
-
 	"fmt"
+	"os"
 )
 
-var isInsert bool = false
-var insertString string = ""
-var isOrder bool = false
-var isHelp bool = false
+var (
+	isInsert     bool   = false
+	insertString string = ""
+	isOrder      bool   = false
+	isHelp       bool   = false
+)
 
 var getString string = ""
 

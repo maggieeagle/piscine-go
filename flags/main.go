@@ -29,7 +29,7 @@ func CheckParam(s string) {
 		switch p[1] {
 		case 'i':
 			isInsert = true
-			insertString = GetSubstring(p, 2, len(p))
+			insertString = GetSubstring(p, 3, len(p))
 		case 'o':
 			isOrder = true
 		case 'h':
@@ -46,14 +46,14 @@ func CheckParam(s string) {
 			}
 		}
 	} else {
-		getString = s
+		getString += s
 	}
 }
 
 func SortString(s string) string {
 	str := []byte(s)
-	for i := 0; i < len(s)-1; i++ {
-		for j := i + 1; j < len(s); j++ {
+	for i := 0; i < len(str)-1; i++ {
+		for j := i + 1; j < len(str); j++ {
 			if str[i] > str[j] {
 				tmp := str[i]
 				str[i] = str[j]
@@ -64,7 +64,7 @@ func SortString(s string) string {
 
 	var res string = ""
 
-	for i := 0; i < len(s); i++ {
+	for i := 0; i < len(str); i++ {
 		res += string(str[i])
 	}
 	return res
@@ -85,8 +85,11 @@ func main() {
 		getString += insertString
 	}
 	if isOrder {
-		fmt.Println(SortString(getString))
+		getString = SortString(getString)
 	}
+
+	fmt.Println(getString)
+
 	if isHelp {
 		fmt.Println("--insert")
 		fmt.Println("  -i")

@@ -25,7 +25,7 @@ func GetSubstring(s []rune, f, l int) string {
 func CheckParam(s string) {
 	p := []rune(s)
 
-	if p[0] == '-' {
+	if len(p) > 0 && p[0] == '-' {
 		switch p[1] {
 		case 'i':
 			isInsert = true

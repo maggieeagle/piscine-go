@@ -88,7 +88,9 @@ func main() {
 		getString = SortString(getString)
 	}
 
-	fmt.Println(getString)
+	if getString != "" {
+		fmt.Println(getString)
+	}
 
 	if isHelp {
 		fmt.Println("--insert")

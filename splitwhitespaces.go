@@ -1,5 +1,16 @@
 package piscine
 
+var separators []rune = []rune{' ', '\n', '\t'}
+
+func IsSeparator(r rune) bool {
+	for i := 0; i < len(separators); i++ {
+		if r == separators[i] {
+			return true
+		}
+	}
+	return false
+}
+
 func SplitWhiteSpaces(s string) []string {
 	var res []string
 
@@ -7,7 +18,7 @@ func SplitWhiteSpaces(s string) []string {
 
 	subs := ""
 	for i := 0; i < len(str); i++ {
-		if str[i] != ' ' || len(subs) == 0 {
+		if !IsSeparator(str[i]) || len(subs) == 0 || (i > 1 && str[i-2] == ' ') {
 			subs += string(str[i])
 		} else {
 			res = append(res, subs)

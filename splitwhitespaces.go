@@ -18,10 +18,12 @@ func SplitWhiteSpaces(s string) []string {
 
 	subs := ""
 	for i := 0; i < len(str); i++ {
-		if !IsSeparator(str[i]) || len(subs) == 0 {
+		if !IsSeparator(str[i]) {
 			subs += string(str[i])
 		} else {
-			res = append(res, subs)
+			if len(subs) != 0 {
+				res = append(res, subs)
+			}
 			subs = ""
 		}
 		if i == len(str)-1 && subs != "" {

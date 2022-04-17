@@ -26,7 +26,9 @@ func Split(s, sep string) []string {
 			subs = ""
 		}
 	}
-	subs += string(str[len(str)-1])
+	for i := len(str) - len(sep) + 1; i < len(str); i++ {
+		subs += string(str[i])
+	}
 	res = append(res, subs)
 	return res
 }

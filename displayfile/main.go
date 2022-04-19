@@ -13,7 +13,7 @@ func main() {
 		fmt.Println("Too many arguments")
 	} else {
 
-		dat, _ := ioutil.ReadFile("quest8.txt")
+		dat, _ := ioutil.ReadFile(os.Args[1])
 		fmt.Print(string(dat))
 	}
 }

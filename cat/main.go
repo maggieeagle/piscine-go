@@ -24,6 +24,7 @@ func main() {
 		if err != nil {
 			printStr("ERROR: " + err.Error())
 			z01.PrintRune('\n')
+			printStr("exit status 1")
 		} else {
 			printStr(string(dat))
 		}

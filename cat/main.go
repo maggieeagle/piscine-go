@@ -1,31 +1,38 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"os"
+
+	"github.com/01-edu/z01"
 )
+
+func printStr(s string) {
+	for _, i := range s {
+		z01.PrintRune(i)
+	}
+}
 
 func main() {
 	switch len(os.Args) {
 	case 1:
-		fmt.Println("Hello\nHello\n^C")
+		printStr("Hello\nHello\n^C")
 	case 2:
 		dat, err := ioutil.ReadFile("../" + os.Args[1])
 		if err != nil {
-			fmt.Println("ERROR: open " + os.Args[1] + ": no such file or directory")
+			printStr("ERROR: open " + os.Args[1] + ": no such file or directory")
 		}
-		fmt.Print(string(dat))
+		printStr(string(dat))
 	case 3:
 		dat, err := ioutil.ReadFile("../" + os.Args[1])
 		dat2, err2 := ioutil.ReadFile("../" + os.Args[2])
 		if err != nil {
-			fmt.Println("ERROR: open " + os.Args[1] + ": no such file or directory")
+			printStr("ERROR: open " + os.Args[1] + ": no such file or directory")
 		}
-		fmt.Print(string(dat))
+		printStr(string(dat))
 		if err2 != nil {
-			fmt.Println("ERROR: open " + os.Args[2] + ": no such file or directory")
+			printStr("ERROR: open " + os.Args[2] + ": no such file or directory")
 		}
-		fmt.Print(string(dat2))
+		printStr(string(dat2))
 	}
 }

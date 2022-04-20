@@ -20,24 +20,24 @@ func main() {
 		io.Copy(os.Stdout, os.Stdin)
 
 	case 2:
-		dat, err := ioutil.ReadFile("../" + os.Args[1])
+		dat, err := ioutil.ReadFile(os.Args[1])
 		if err != nil {
-			printStr("ERROR: open " + os.Args[1] + ": no such file or directory")
+			printStr("ERROR: " + err.Error())
 			z01.PrintRune('\n')
 		} else {
 			printStr(string(dat))
 		}
 	case 3:
-		dat, err := ioutil.ReadFile("../" + os.Args[1])
-		dat2, err2 := ioutil.ReadFile("../" + os.Args[2])
+		dat, err := ioutil.ReadFile(os.Args[1])
+		dat2, err2 := ioutil.ReadFile(os.Args[2])
 		if err != nil {
-			printStr("ERROR: open " + os.Args[1] + ": no such file or directory")
+			printStr("ERROR: " + err.Error())
 			z01.PrintRune('\n')
 		} else {
 			printStr(string(dat))
 		}
 		if err2 != nil {
-			printStr("ERROR: open " + os.Args[2] + ": no such file or directory")
+			printStr("ERROR: " + err.Error())
 			z01.PrintRune('\n')
 		} else {
 			printStr(string(dat2))

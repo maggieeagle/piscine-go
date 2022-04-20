@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io"
 	"io/ioutil"
 	"os"
 
@@ -16,7 +17,8 @@ func printStr(s string) {
 func main() {
 	switch len(os.Args) {
 	case 1:
-		printStr("Hello\nHello\n^C")
+		io.Copy(os.Stdout, os.Stdin)
+
 	case 2:
 		dat, err := ioutil.ReadFile("../" + os.Args[1])
 		if err != nil {

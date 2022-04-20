@@ -11,14 +11,14 @@ func main() {
 	case 1:
 		fmt.Println("Hello\nHello\n^C")
 	case 2:
-		dat, err := ioutil.ReadFile(os.Args[1])
+		dat, err := ioutil.ReadFile("../" + os.Args[1])
 		if err != nil {
 			fmt.Println("ERROR: open " + os.Args[1] + ": no such file or directory")
 		}
 		fmt.Print(string(dat))
 	case 3:
-		dat, err := ioutil.ReadFile(os.Args[1])
-		dat2, err2 := ioutil.ReadFile(os.Args[2])
+		dat, err := ioutil.ReadFile("../" + os.Args[1])
+		dat2, err2 := ioutil.ReadFile("../" + os.Args[2])
 		if err != nil {
 			fmt.Println("ERROR: open " + os.Args[1] + ": no such file or directory")
 		}

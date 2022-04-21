@@ -123,7 +123,7 @@ func main() {
 		} else {
 			res := makeOperation(a, b, sign)
 			if res[1] == 0 {
-				os.Stdout.WriteString(nbrToString(res[0]))
+				os.Stdout.WriteString(nbrToString(res[0]) + "\n")
 			}
 		}
 	}

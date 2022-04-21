@@ -117,9 +117,9 @@ func main() {
 		sign := []rune(params[2])[0]
 
 		if sign == '/' && b == 0 {
-			os.Stdout.WriteString("No division by 0")
+			os.Stdout.WriteString("No division by 0\n")
 		} else if sign == '%' && b == 0 {
-			os.Stdout.WriteString("No modulo by 0")
+			os.Stdout.WriteString("No modulo by 0\n")
 		} else {
 			res := makeOperation(a, b, sign)
 			if res[1] == 0 {

@@ -4,8 +4,10 @@ import (
 	"os"
 )
 
-var MIN_INT = []rune("-9223372036854775808")
-var MAX_INT = []rune("9223372036854775807")
+var (
+	MIN_INT = []rune("-9223372036854775808")
+	MAX_INT = []rune("9223372036854775807")
+)
 
 func isNumeric(s string) bool {
 	str := []byte(s)

@@ -137,6 +137,9 @@ func nbrToString(n int) string {
 		plus = "-"
 		n *= -1
 	}
+	if n == 0 {
+		return "0"
+	}
 	for n > 0 {
 		res = DigitToString(n%10) + res
 		n /= 10

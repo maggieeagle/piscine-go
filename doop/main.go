@@ -58,7 +58,7 @@ func makeOperation(a, b int, sign rune) []int {
 	res := []int{0, 0}
 	switch sign {
 	case '+':
-		tmp := a
+		tmp := a // help vars to check if result over int diapason
 		old_tmp := a
 		for i := 0; i < b; i++ {
 			tmp += 1
@@ -73,7 +73,6 @@ func makeOperation(a, b int, sign rune) []int {
 		for i := 0; i < b; i++ {
 			tmp -= 1
 			if tmp > old_tmp {
-				println("Caraul!")
 				res[1] = 1
 			}
 		}
@@ -118,15 +117,57 @@ func main() {
 		sign := []rune(params[2])[0]
 
 		if sign == '/' && b == 0 {
-			print("No division by 0")
+			os.Stdout.WriteString("No division by 0")
 		} else if sign == '%' && b == 0 {
-			print("No modulo by 0")
+			os.Stdout.WriteString("No modulo by 0")
 		} else {
 			res := makeOperation(a, b, sign)
 			if res[1] == 0 {
-				println(res[0])
+				os.Stdout.WriteString(nbrToString(res[0]))
 			}
 		}
+	}
+}
+
+func nbrToString(n int) string {
+	res := ""
+	plus := ""
+
+	if n < 0 {
+		plus = "-"
+		n *= -1
+	}
+	for n > 0 {
+		res = DigitToString(n%10) + res
+		n /= 10
+	}
+	return plus + res
+}
+
+func DigitToString(digit int) string {
+	switch digit {
+	case 0:
+		return "0"
+	case 1:
+		return "1"
+	case 2:
+		return "2"
+	case 3:
+		return "3"
+	case 4:
+		return "4"
+	case 5:
+		return "5"
+	case 6:
+		return "6"
+	case 7:
+		return "7"
+	case 8:
+		return "8"
+	case 9:
+		return "9"
+	default:
+		return ""
 	}
 }
 

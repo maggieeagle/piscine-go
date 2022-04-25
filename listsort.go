@@ -21,7 +21,7 @@ func ListSort(l *NodeI) *NodeI {
 		}
 		node = node.Next
 	}
-	return node
+	return l
 }
 
 func swap(a, b *NodeI) {
